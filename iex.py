@@ -8,9 +8,6 @@ Created on Sun Apr  5 06:43:27 2020
 # Register aaccount https://iexcloud.io/
 
 
-# MCS API Token: pk_44de71531a5d400bb1bd98a2c7dd011d <- Yahoo.com
-# MCS API Token: pk_470c2230657e4df083d1a54d0b1c15b5 <- google.com
-# MCS API Token: pk_833e506a9b0b401a86305de47e566600 <- icloud.com
 
 # pip install iexfinance
 
@@ -41,7 +38,7 @@ sp = pd.read_csv('S&P500-Symbols.csv', index_col=[0])
 # Getting Company Info (“company name”, “CEO”, “Sector” and “Industry”)
 def getCompanyInfo(symbols):
     stock_batch = Stock(symbols,
-                        token='pk_44de71531a5d400bb1bd98a2c7dd011d')
+                        token='pk_xxxxxxxxxxxxxxxx')
     company_info = stock_batch.get_company()
     return company_info
 
@@ -65,7 +62,7 @@ df.head()
 ## Get the earnings of a single company
 def getEarnings(symbol):
     stock_batch = Stock(symbol,
-                        token='pk_470c2230657e4df083d1a54d0b1c15b5')
+                        token='pk_xxxxxxx')
     earnings = stock_batch.get_earnings(last=4)
     return earnings
 
@@ -79,7 +76,7 @@ df_earnings = pd.DataFrame(single_stock_earnings)
 def getHistoricalPrices(stock):
     return get_historical_data(stock, start, end, 
                                output_format='pandas', 
-                               token='pk_833e506a9b0b401a86305de47e566600')
+                               token='pk_xxxxxxxxx')
  
 start = datetime(2020, 1, 1)
 end = datetime(2020, 4, 3)
