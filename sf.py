@@ -16,7 +16,7 @@ rcParams.update({'figure.autolayout': True,
 # Gets the version
 ctx = snowflake.connector.connect(
                 user='ms4446',
-                password='Yankees@33',
+                password='xxxxxx',
                 account='jqa18325.us-east-1',
                 #warehouse='COMPUTE_WH',
                 database='CITIBIKE',
